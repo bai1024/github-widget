@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Github-widget</title>
+  <script src="scripts/jquery-1.7.1.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">  
+</head>
+<body>
+  <main>
+    <div class="top">
+      <div class="person">
+        <img src="https://avatars.githubusercontent.com/u/4210829?v=3" id="avatar">
+
+        <div>
+          <p id="name">dingxijin</p>
+          <p id="bio">code</p>        
+          <p id="location" i class="fa fa-map-marker">shanghai</p>
+        </div>
+      </div>
+
+      <div class="repos">
+        <div>         
+          <div id="follower">2</div>
+          <div>Follower</div>    
+        </div>
+   
+        <div>
+          <div id="following"></div>
+          <div>Following</div>
+        </div>
+
+        <div>
+          <div id="repositories">2</div>
+          <div>Repositories</div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="bottom">
+      <p>Top repositories</p>
+
+      <div class="repos-message">
+          <div class="repo" >
+            <div id ="repo-name1">github-widget</div>
+            <div id="language1">JavaScript</div>
+            <div>
+              ★
+              <span id="star1"></span>
+            </div>
+          </div>
+
+          <div class="repo" >
+            <div id="repo-name2">ridestats</div>
+            <div id="language2">Python</div>
+            <div>
+              ★
+              <span id="star2"></span>
+            </div>
+          </div>
+
+          <div class="repo" >
+            <div id="repo-name3">frontend-nanodegree-arcade-game</div>
+            <div id="language3">JavaScript</div>
+            <div>
+              ★
+              <span id="star3"></span>
+            </div>
+          </div>
+
+        <div class="contact">
+          <div>
+          <a href="https://api.github.com/users/{user}">Follow</a>        
+          </div>
+        </div>
+
+      </div>
+
+      
+      
+    </div>
+  </main>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

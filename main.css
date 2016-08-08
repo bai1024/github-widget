@@ -1,0 +1,115 @@
+body {
+  font-family: "Helvetica";
+  font-size: 16px;
+}
+
+main {
+  width: 400px;
+  height: 560px;
+  margin: auto;
+  border: solid 1px #ccc;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.top .person {
+  padding: 10px 20px
+}
+
+.top .person > div {
+  display: inline-block;
+  width: 270px;
+  text-align: center;
+}
+#name {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+#bio {
+  color: #4078C0;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+#location {
+  font-size: 14px;
+}
+
+.top .person > img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.top .repos {
+  margin-top: 20px;
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.top .repos > div {
+  width: 33.3%;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.top .repos > div > div:first-child {
+    margin-bottom: 10px;
+    color: #4078C0;
+}
+
+.repos-message {
+  font-size: 0;
+  padding: 15px 15px;
+  box-shadow: border-box;
+}
+
+.bottom > p{
+  text-align: center;
+  font-size: 16px;
+}
+
+
+.bottom .repos-message .repo > div{
+  display: inline-block;
+  width:33.3%;
+  font-size: 16px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.bottom .repos-message .repo > div:first-child {
+  color: #4078C0;
+}
+
+#language1, #language2, #language3{
+  padding-left: 55px;
+  box-sizing: border-box;
+}
+
+.bottom .repos-message .repo > div:last-child {
+  padding-left: 60px;
+  box-sizing: border-box;
+ }
+
+.bottom .contact > div{
+  font-size: 16px;
+  color: #4078C0;
+  background-color: #ddd;
+  width: 88px;
+  height: 27px;
+  border:none;
+  margin-top: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+.bottom .contact > div > a { 
+  text-decoration: none;
+  color: #4078C0
+}
