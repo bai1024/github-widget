@@ -1,3 +1,6 @@
+var firstReady = false
+var secondReady = false
+
 function getData (name) {
   $.ajax({
     url:"https://api.github.com/users/" + name,
@@ -10,6 +13,11 @@ function getData (name) {
       $("#following").text(data.following)
       $("#repositories").text(data.public_repos)
       $("#user").attr(data.url)
+
+      firstReady = true
+      if(secondReady) {
+        $("main").css("display", "block")
+      }
     }
   })
 
@@ -28,8 +36,12 @@ function getData (name) {
       $("#language3").text(newdata[2].language)
       $("#star1").text(newdata[0].stargazers_count)
       $("#star2").text(newdata[1].stargazers_count)
-      $("#star3").text(newdata[2].stargazers_count)   
+      $("#star3").text(newdata[2].stargazers_count)  
+      secondReady = true
+      if(firstReady) {
+        $("main").css("display", "block") 
+      }
     }
   })
 }
-getData("dingdingbai")
+getData("fate-lovely")

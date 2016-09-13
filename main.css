@@ -13,9 +13,10 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
+  display: none;
 }
 
-.top .person {
+/*.top .person {
   padding: 10px 20px
 }
 
@@ -23,7 +24,25 @@ main {
   display: inline-block;
   width: 270px;
   text-align: center;
+}*/
+
+.person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
+.person > img {
+  flex: 2;
+  padding: 10px;
+}
+
+.person > div {
+  flex: 5;
+  width: 270px;
+  text-align: center;
+}
+
 #name {
   font-size: 25px;
   margin-bottom: 0;
@@ -97,19 +116,21 @@ main {
   box-sizing: border-box;
  }
 
-.bottom .contact > div{
-  font-size: 16px;
-  color: #4078C0;
-  background-color: #ddd;
-  width: 88px;
-  height: 27px;
-  border:none;
-  margin-top: 0;
-  margin-right: 0;
-  text-align: center;
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.bottom .contact > div > a { 
-  text-decoration: none;
-  color: #4078C0
+.follow > span {
+  border: none;
+  background: #ddd;
+  padding: 5px 30px;
+  box-sizing: border-box;
 }
+
+.follow a { 
+  color: #4078C0;
+  text-decoration: none;
+}
+
