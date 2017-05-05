@@ -1,5 +1,13 @@
 var firstReady = false
 var secondReady = false
+var name = ''
+
+$('.search-bar').on('click','button',function(){
+  name = $(this).siblings('input').val();
+  if(name){
+    getData(name)
+  }
+})
 
 function getData (name) {
   $.ajax({
@@ -12,7 +20,8 @@ function getData (name) {
       $("#follower").text(data.followers)
       $("#following").text(data.following)
       $("#repositories").text(data.public_repos)
-      $("#user").attr(data.url)
+      $("#user").attr(data.url);
+      $('.follow span').html('<a href="'+ data.url+'">Follow</a>')
 
       firstReady = true
       if(secondReady) {
@@ -27,16 +36,19 @@ function getData (name) {
       var newdata = data.sort(function(a, b){
         return b.stargazers_count - a.stargazers_count
       })
-
-      $("#repo-name1").text(newdata[0].name)
-      $("#repo-name2").text(newdata[1].name)
-      $("#repo-name3").text(newdata[2].name)
-      $("#language1").text(newdata[0].language)
-      $("#language2").text(newdata[1].language)
-      $("#language3").text(newdata[2].language)
-      $("#star1").text(newdata[0].stargazers_count)
-      $("#star2").text(newdata[1].stargazers_count)
-      $("#star3").text(newdata[2].stargazers_count)  
+      for(var i =0;i < 3;i++){
+         var $str += `
+          <div class="repo">
+            <div id="repo-name1"><a href="${newdata[i].html_url}">${newdata[i].name}</a></div>
+            <div id="language1">${newdata[i].language}</div>
+            <div>
+              ★
+              <span id="star1">${newdata[i].stargazers_count}</span>
+            </div>
+          </div>
+        `
+      }
+      $('.repos-message').html($str);
       secondReady = true
       if(firstReady) {
         $("main").css("display", "block") 

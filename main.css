@@ -5,7 +5,7 @@ body {
 
 main {
   width: 400px;
-  height: 560px;
+  height: 600px;
   margin: auto;
   border: solid 1px #ccc;
   position: fixed;
@@ -25,6 +25,33 @@ main {
   width: 270px;
   text-align: center;
 }*/
+
+.search-bar{
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar > input{
+  height: 31px;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  width: calc(100% - 80px);
+}
+
+.search-bar > button {
+  background:#3F5CA5;
+  border:1px solid #3f5ca5;
+  height: 40px;
+  width: 80px; 
+  outline: none
+}
+
+.search-bar > button > img{
+  width: 20px;
+}
 
 .person {
   display: flex;
@@ -102,8 +129,14 @@ main {
   text-align: left;
 }
 
-.bottom .repos-message .repo > div:first-child {
+.bottom .repos-message .repo > div:first-child > a {
   color: #4078C0;
+  text-decoration: none;
+}
+
+.bottom .repos-message .repo > div:first-child > a:hover {
+  color: #5B94DC;
+  text-decoration: none;
 }
 
 #language1, #language2, #language3{
