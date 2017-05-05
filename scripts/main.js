@@ -2,6 +2,11 @@ var firstReady = false
 var secondReady = false
 var name = ''
 
+
+$('.follow').on('click',function(){
+  window.open('https://github.com/fate-lovely');
+});
+
 $('.search-bar').on('click','button',function(){
   name = $(this).siblings('input').val();
   if(name){
@@ -20,8 +25,8 @@ function getData (name) {
       $("#follower").text(data.followers)
       $("#following").text(data.following)
       $("#repositories").text(data.public_repos)
-      $("#user").attr(data.url);
-      $('.follow span').html('<a href="'+ data.url+'">Follow</a>')
+      $("#user").attr(data.url)
+      $('.follow span').html('<a href="'+ data.url+'">Foll</a>')
 
       firstReady = true
       if(secondReady) {
@@ -37,7 +42,8 @@ function getData (name) {
         return b.stargazers_count - a.stargazers_count
       })
       for(var i =0;i < 3;i++){
-         var $str 
+        // console.log(newdata{i}.html_url)
+        var $str
          $str += `
           <div class="repo">
             <div id="repo-name1"><a href="${newdata[i].html_url}">${newdata[i].name}</a></div>
