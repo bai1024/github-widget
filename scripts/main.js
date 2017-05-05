@@ -37,7 +37,8 @@ function getData (name) {
         return b.stargazers_count - a.stargazers_count
       })
       for(var i =0;i < 3;i++){
-         var $str += `
+         var $str 
+         $str += `
           <div class="repo">
             <div id="repo-name1"><a href="${newdata[i].html_url}">${newdata[i].name}</a></div>
             <div id="language1">${newdata[i].language}</div>
